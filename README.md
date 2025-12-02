@@ -20,14 +20,14 @@
 ---
 
 ## 📑 **Tabla de Contenidos**
-- [Acerca del Proyecto](#-acerca-del-proyecto)
-- [Estructura del Repositorio](#-estructura-del-repositorio)
-- [Componentes del Proceso](#-componentes-del-proceso)
-- [Requisitos del Entorno](#-requisitos-del-entorno)
-- [Cómo Reproducir los Resultados](#-cómo-reproducir-los-resultados)
-- [Figuras Incluidas](#-figuras-incluidas)
-- [Licencia y Uso de Datos](#-licencia-y-uso-de-datos)
-- [Autor](#-autor)
+- [Acerca del Proyecto](#acerca-del-proyecto)
+- [Estructura del Repositorio](#estructura-del-repositorio)
+- [Componentes del Proceso](#componentes-del-proceso)
+- [Requisitos del Entorno](#requisitos-del-entorno)
+- [Cómo Reproducir los Resultados](#cómo-reproducir-los-resultados)
+- [Figuras Incluidas](#figuras-incluidas)
+- [Licencia y Uso de Datos](#licencia-y-uso-de-datos)
+- [Autor](#autor)
 
 ---
 
