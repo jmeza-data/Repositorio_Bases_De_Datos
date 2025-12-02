@@ -1,0 +1,185 @@
+<div align="center">
+
+# 📊 **Repositorio de Bases de Datos – ECV 2024 & IPM Colombia**
+
+<img src="https://raw.githubusercontent.com/github/explore/main/topics/r/r.png" width="90">
+<br>
+**Procesamiento de Microdatos – Ingeniería de Datos – Ciencia Social Cuantitativa**
+
+[![Status](https://img.shields.io/badge/Estado-Activo-success?style=flat-square)]()
+[![License](https://img.shields.io/badge/Licencia-DANE%20Microdatos-blue?style=flat-square)]()
+[![Made with R](https://img.shields.io/badge/Hecho%20en-R-276DC3?style=flat&logo=r&logoColor=white)]()
+[![GitHub Repo](https://img.shields.io/badge/GitHub-jmeza--data-black?style=flat&logo=github)]()
+
+</div>
+
+---
+
+## 📚 **Tabla de Contenidos**
+- [Acerca del Proyecto](#-acerca-del-proyecto)
+- [Estructura del Repositorio](#-estructura-del-repositorio)
+- [Componentes del Proceso](#-componentes-del-proceso)
+- [Requisitos del Entorno](#-requisitos-del-entorno)
+- [Cómo Reproducir los Resultados](#-cómo-reproducir-los-resultados)
+- [Figuras Incluidas](#-figuras-incluidas)
+- [Licencia y Uso de Datos](#-licencia-y-uso-de-datos)
+- [Autor](#-autor)
+
+---
+
+## 🧩 **Acerca del Proyecto**
+
+Este repositorio contiene la **infraestructura completa** utilizada para la construcción de bases derivadas de la **Encuesta de Calidad de Vida (ECV 2024)** y el cálculo del **Índice de Pobreza Multidimensional (IPM)** para Colombia.
+
+El repositorio forma parte del proyecto académico:
+
+### 📝  
+**“Medición multidimensional de la pobreza en Colombia y análisis complementario mediante técnicas de Machine Learning”**
+
+que combina:
+
+- Ingeniería de datos  
+- Estadística social  
+- Procesamiento de microdatos  
+- Machine Learning  
+- Visualización avanzada  
+
+---
+
+## 📁 **Estructura del Repositorio**
+
+```text
+Repositorio_Bases_De_Datos/
+│
+├── 01_Scripts/               # Construcción y limpieza
+│     ├── Limpieza_de_datos.R
+│     ├── Construcción_Base_ECV_Personas.R
+│     └── Contrucción_base_IPM_Nivel_hogar.R
+│
+├── 02_Datos_Procesados/      # Outputs derivados
+│     ├── hogares_ML.csv
+│     └── base_final.csv
+│
+├── 03_Figuras/               # Gráficos en alta calidad
+│     ├── mapas, indicadores, pirámide poblacional...
+│
+└── README.md
+⚙️ Componentes del Proceso
+🔹 1. Limpieza inicial y estandarización
+Unificación de módulos
+
+Ajuste de tipos
+
+Depuración de inconsistencias
+
+🔹 2. Construcción de la base a nivel persona
+Derivación de variables
+
+Cálculo de privaciones
+
+Estructura AF
+
+🔹 3. Base a nivel hogar
+Agregación
+
+Consolidación de privaciones
+
+Identificación del estado de pobreza
+
+🔹 4. Preparación para Machine Learning
+Base hogares_ML.csv
+
+Variables demográficas, educativas, habitacionales
+
+Dataset completamente limpio
+
+🔹 5. Generación de figuras
+Mapas
+
+Indicadores descriptivos
+
+Gráficos comparativos
+
+Pirámides poblacionales
+
+🧠 Requisitos del Entorno
+Lenguaje: R ≥ 4.2
+Paquetes requeridos:
+
+r
+Copiar código
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(stringr)
+Scripts incluyen dependencias completas.
+
+🔁 Cómo Reproducir los Resultados
+1️⃣ Descargar microdatos (DANE)
+👉 https://microdatos.dane.gov.co/
+
+2️⃣ Guardar los módulos originales
+Personas
+
+Hogares
+
+Viviendas (si aplica)
+
+3️⃣ Ejecutar los scripts en el siguiente orden:
+text
+Copiar código
+01 - Limpieza_de_datos.R
+02 - Construcción_Base_ECV_Personas.R
+03 - Contrucción_base_IPM_Nivel_hogar.R
+4️⃣ Resultados generados automáticamente:
+base_final.csv
+
+hogares_ML.csv
+
+🖼️ Figuras Incluidas
+Las figuras del repositorio presentan:
+
+🗺️ Mapas IPM por departamento
+
+📊 Indicadores de privaciones
+
+🏘️ Condiciones habitacionales
+
+📚 Educación
+
+👷 Empleo
+
+👥 Pirámide poblacional
+
+Todas en alta resolución, exportadas para uso en tesis y artículos.
+
+📜 Licencia y Uso de Datos
+Los scripts y figuras son de libre uso bajo estándares académicos.
+
+Los microdatos originales del DANE NO están incluidos, y deben descargarse desde su portal oficial.
+
+El repositorio respeta la política de protección de microdatos.
+
+👤 Autor
+Jhoan Sebastián Meza García
+Estudiante de Economía – Universidad Nacional de Colombia
+Investigación en pobreza, análisis socioeconómico y machine learning
+📌 GitHub: https://github.com/jmeza-data
+
+Si este repositorio te fue útil, ¡considera dejar una estrella ⭐!
+
+yaml
+Copiar código
+
+---
+
+# ⭐ ¿Quieres una versión con colores corporativos, encabezados con banner y logos del DANE + UNAL?  
+
+Puedo hacerte un README aún más llamativo con:
+
+🎨 Paleta institucional  
+📌 Banner superior moderno  
+📎 Iconos SVG personalizados  
+📦 Sección de instaladores  
+📘 Documentación extendida estilo PDF  
+
