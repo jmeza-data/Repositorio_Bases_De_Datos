@@ -170,18 +170,45 @@ source("01_Scripts/Contrucción_base_IPM_Nivel_hogar.R")
 
 ## Figuras Incluidas
 
-Las visualizaciones generadas incluyen:
+A continuación se presentan las principales visualizaciones generadas en el proyecto:
 
-| Figura | Descripción |
-|--------|-------------|
-| `Piramide_poblaciona_de_colombia.png` | Pirámide poblacional por sexo y edad |
-| `Indicadores.png` | Dashboard de indicadores clave del IPM |
-| `Educacion.png` | Análisis de dimensiones educativas |
-| `Acceso_a_servicIOs_publicos.png` | Cobertura de servicios públicos |
-| `Condiciones_del_hogar.png` | Calidad de la vivienda |
-| `Condiciones_ed_hacinamiento_por_zona.png` | Hacinamiento urbano vs rural |
+### Pirámide Poblacional de Colombia
+![Pirámide poblacional](03_Figuras/Piramide_poblaciona_de_colombia.png)
+*Distribución de la población colombiana por sexo y grupos de edad según la ECV 2024*
 
-Todas las figuras están en formato PNG de alta resolución y listas para uso en presentaciones o documentos académicos.
+---
+
+### Dashboard de Indicadores Clave del IPM
+![Indicadores IPM](03_Figuras/Indicadores.png)
+*Panel de control con los principales indicadores del Índice de Pobreza Multidimensional*
+
+---
+
+### Análisis de Dimensiones Educativas
+![Educación](03_Figuras/Educacion.png)
+*Análisis de logro educativo, analfabetismo, inasistencia escolar y rezago escolar*
+
+---
+
+### Cobertura de Servicios Públicos
+![Servicios públicos](03_Figuras/Acceso_a_servicIOs_publicos.png)
+*Acceso a agua potable, energía eléctrica y saneamiento básico*
+
+---
+
+### Condiciones de la Vivienda
+![Condiciones hogar](03_Figuras/Condiciones_del_hogar.png)
+*Calidad de materiales de construcción y condiciones habitacionales*
+
+---
+
+### Hacinamiento por Zona Geográfica
+![Hacinamiento](03_Figuras/Condiciones_ed_hacinamiento_por_zona.png)
+*Comparación del hacinamiento crítico entre zonas urbanas y rurales*
+
+---
+
+**Nota:** Todas las figuras están en formato PNG de alta resolución y listas para uso en presentaciones o documentos académicos.
 
 ---
 
