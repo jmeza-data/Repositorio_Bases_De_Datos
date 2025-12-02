@@ -1,161 +1,219 @@
-<div align="center">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/r/r.png" width="100">
+</p>
 
-# 📚 **Repositorio de Bases de Datos – ECV 2024 & IPM Colombia**
+<h1 align="center">Repositorio de Bases de Datos – ECV 2024 & IPM Colombia</h1>
 
-<img src="https://raw.githubusercontent.com/github/explore/main/topics/r/r.png" width="90">
+<p align="center">
+  <b>Economía · Econometría · Estadística Aplicada</b>
+</p>
 
-<br>
-
-### **Procesamiento de Microdatos • Ingeniería de Datos • Estadística Social**
-
-<br>
-
-![Status](https://img.shields.io/badge/Estado-Activo-success?style=flat-square)
-![License](https://img.shields.io/badge/Licencia-DANE%20Microdatos-blue?style=flat-square)
-![Made with R](https://img.shields.io/badge/Hecho%20en-R-276DC3?style=flat&logo=r&logoColor=white)
-![GitHub Repo](https://img.shields.io/badge/GitHub-jmeza--data-black?style=flat&logo=github)
-
-</div>
+<p align="center">
+  <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R">
+  <img src="https://img.shields.io/badge/License-Academic-blue" alt="License">
+</p>
 
 ---
 
-## 📑 **Tabla de Contenidos**
-- [Acerca del Proyecto](#acerca-del-proyecto)
-- [Estructura del Repositorio](#estructura-del-repositorio)
-- [Componentes del Proceso](#componentes-del-proceso)
-- [Requisitos del Entorno](#requisitos-del-entorno)
-- [Cómo Reproducir los Resultados](#cómo-reproducir-los-resultados)
-- [Figuras Incluidas](#figuras-incluidas)
-- [Licencia y Uso de Datos](#licencia-y-uso-de-datos)
-- [Autor](#autor)
+## 📑 Tabla de Contenidos
+
+- [📖 Acerca del Proyecto](#acerca-del-proyecto)
+- [📁 Estructura del Repositorio](#estructura-del-repositorio)
+- [⚙️ Componentes del Proceso](#componentes-del-proceso)
+- [🔧 Requisitos del Entorno](#requisitos-del-entorno)
+- [▶️ Cómo Reproducir los Resultados](#cómo-reproducir-los-resultados)
+- [📊 Figuras Incluidas](#figuras-incluidas)
+- [📄 Licencia y Uso de Datos](#licencia-y-uso-de-datos)
+- [👤 Autor](#autor)
 
 ---
 
-## 🧩 **Acerca del Proyecto**
+## Acerca del Proyecto
 
-Este repositorio contiene la infraestructura completa utilizada para:
+Este repositorio contiene el procesamiento completo de la **Encuesta de Calidad de Vida (ECV) 2024** del DANE y la construcción del **Índice de Pobreza Multidimensional (IPM)** para Colombia utilizando la metodología de Alkire-Foster.
 
-- Construcción de bases derivadas de la **Encuesta de Calidad de Vida (ECV 2024)**
-- Cálculo del **Índice de Pobreza Multidimensional (IPM)** para Colombia
-- Preparación de datasets para Machine Learning
-- Producción de figuras descriptivas y mapas
+El proyecto forma parte del trabajo académico en **Economía Aplicada** de la Universidad Nacional de Colombia y tiene como objetivo:
 
-Proyecto académico asociado al trabajo:
+- Limpiar y estructurar las bases de datos de la ECV 2024
+- Construir una base de datos consolidada a nivel de hogares
+- Calcular el IPM oficial de Colombia
+- Generar análisis descriptivos mediante visualizaciones profesionales
 
-### **“Medición multidimensional de la pobreza en Colombia y análisis complementario mediante técnicas de Machine Learning”**
+Los datos procesados y las figuras resultantes pueden ser utilizados para análisis econométricos, trabajos de investigación y proyectos de política pública.
 
 ---
 
-## 📁 **Estructura del Repositorio**
-
-```text
+## Estructura del Repositorio
+```
 Repositorio_Bases_De_Datos/
 │
 ├── 01_Scripts/
-│     ├── Limpieza_de_datos.R
-│     ├── Construcción_Base_ECV_Personas.R
-│     └── Contrucción_base_IPM_Nivel_hogar.R
+│   ├── Limpieza_de_datos.R
+│   ├── Construcción_Base_ECV_Personas.R
+│   └── Contrucción_base_IPM_Nivel_hogar.R
 │
 ├── 02_Datos_Procesados/
-│     ├── hogares_ML.csv
-│     └── base_final.csv
+│   ├── hogares_ML.csv
+│   └── base_final.csv (IPM calculado)
 │
 ├── 03_Figuras/
-│     ├── Mapas e indicadores en PNG
+│   ├── 1462e62a-7028-47b0-9900-378d7f8f930a.png
+│   ├── Acceso_a_servicIOs_publicos.png
+│   ├── Condiciones_del_hogar.png
+│   ├── Condiciones_ed_hacinamiento_por_zona.png
+│   ├── Educacion.png
+│   ├── Indicadores.png
+│   └── Piramide_poblaciona_de_colombia.png
 │
 └── README.md
-⚙️ Componentes del Proceso
-🔹 1. Limpieza y estandarización
-Integración de módulos
+```
 
-Normalización de columnas
+---
 
-Depuración de valores faltantes
+## Componentes del Proceso
 
-🔹 2. Construcción de la base a nivel persona
-Variables derivadas
+### 1️⃣ **Limpieza de datos**
+Script: `Limpieza_de_datos.R`
 
-Identificación de privaciones AF
+- Carga de módulos de la ECV 2024
+- Depuración y estandarización de variables
+- Manejo de valores perdidos y outliers
+- Codificación de variables categóricas
 
-🔹 3. Construcción de la base a nivel hogar
-Agregación por DIRECTORIO – SECUENCIA P
+### 2️⃣ **Construcción de base de personas**
+Script: `Construcción_Base_ECV_Personas.R`
 
-Cálculo de privaciones del hogar
+- Integración de módulos individuales
+- Construcción de variables derivadas (edad, educación, empleo)
+- Generación de `hogares_ML.csv` para análisis de Machine Learning
 
-Determinación del estado de pobreza
+### 3️⃣ **Cálculo del IPM**
+Script: `Contrucción_base_IPM_Nivel_hogar.R`
 
-🔹 4. Preparación para Machine Learning
-Base final hogares_ML.csv
+- Implementación de la metodología Alkire-Foster
+- Construcción de las 15 dimensiones del IPM colombiano:
+  - Logro educativo
+  - Analfabetismo
+  - Inasistencia escolar
+  - Rezago escolar
+  - Barreras de acceso a servicios de salud
+  - Sin aseguramiento en salud
+  - Trabajo infantil
+  - Desempleo de larga duración
+  - Empleo informal
+  - Hacinamiento crítico
+  - Material inadecuado de pisos
+  - Material inadecuado de paredes
+  - Inadecuada eliminación de excretas
+  - Sin acceso a fuente de agua mejorada
+  - Sin acceso a energía eléctrica
 
-Variables socioeconómicas, educativas y demográficas
+- Generación de índices H (incidencia), A (intensidad) y M0 (IPM)
+- Exportación de `base_final.csv`
 
-🔹 5. Figuras descriptivas
-Mapas
+---
 
-Gráficos comparativos
+## Requisitos del Entorno
 
-Pirámides poblacionales
+### Software
+- **R** versión ≥ 4.0.0
+- **RStudio** (recomendado)
 
-🧠 Requisitos del Entorno (R)
-Versión recomendada: R ≥ 4.2
+### Paquetes de R
+```r
+# Manejo de datos
+install.packages("tidyverse")
+install.packages("dplyr")
+install.packages("readr")
+install.packages("haven")
 
-Paquetes requeridos:
+# Visualización
+install.packages("ggplot2")
+install.packages("scales")
+install.packages("RColorBrewer")
 
-r
-Copiar código
-library(tidyverse)
-library(readr)
-library(dplyr)
-library(stringr)
-🔁 Cómo Reproducir los Resultados
-1️⃣ Descargar microdatos
-https://microdatos.dane.gov.co/
+# Manejo de archivos
+install.packages("openxlsx")
+install.packages("data.table")
+```
 
-2️⃣ Guardar los módulos originales:
-Hogares
+---
 
-Personas
+## Cómo Reproducir los Resultados
 
-Viviendas (opcional)
+### Paso 1: Clonar el repositorio
+```bash
+git clone https://github.com/jmeza-data/Repositorio_Bases_De_Datos.git
+cd Repositorio_Bases_De_Datos
+```
 
-3️⃣ Ejecutar los scripts en orden:
-text
-Copiar código
-01 - Limpieza_de_datos.R
-02 - Construcción_Base_ECV_Personas.R
-03 - Contrucción_base_IPM_Nivel_hogar.R
-4️⃣ Salidas generadas automáticamente:
-base_final.csv
+### Paso 2: Descargar datos de la ECV 2024
+Descarga los microdatos oficiales desde el [DANE](https://www.dane.gov.co/) y colócalos en una carpeta `00_Datos_Crudos/`.
 
-hogares_ML.csv
+### Paso 3: Ejecutar scripts en orden
+```r
+# 1. Limpieza
+source("01_Scripts/Limpieza_de_datos.R")
 
-🖼️ Figuras Incluidas
-Mapas IPM
+# 2. Construcción de base de personas
+source("01_Scripts/Construcción_Base_ECV_Personas.R")
 
-Acceso a servicios públicos
+# 3. Cálculo del IPM
+source("01_Scripts/Contrucción_base_IPM_Nivel_hogar.R")
+```
 
-Condiciones del hogar
+### Paso 4: Consultar resultados
+- **Bases procesadas:** `02_Datos_Procesados/`
+- **Figuras generadas:** `03_Figuras/`
 
-Condiciones de hacinamiento
+---
 
-Empleo
+## Figuras Incluidas
 
-Educación
+Las visualizaciones generadas incluyen:
 
-Pirámide poblacional
+| Figura | Descripción |
+|--------|-------------|
+| `Piramide_poblaciona_de_colombia.png` | Pirámide poblacional por sexo y edad |
+| `Indicadores.png` | Dashboard de indicadores clave del IPM |
+| `Educacion.png` | Análisis de dimensiones educativas |
+| `Acceso_a_servicIOs_publicos.png` | Cobertura de servicios públicos |
+| `Condiciones_del_hogar.png` | Calidad de la vivienda |
+| `Condiciones_ed_hacinamiento_por_zona.png` | Hacinamiento urbano vs rural |
 
-📜 Licencia y Uso de Datos
-Los scripts y figuras son de uso libre.
+Todas las figuras están en formato PNG de alta resolución y listas para uso en presentaciones o documentos académicos.
 
-Los microdatos originales del DANE NO se incluyen por restricciones legales.
+---
 
-Este repositorio respeta la política de protección de microdatos del DANE.
+## Licencia y Uso de Datos
 
-👤 Autor
-Jhoan Sebastián Meza García
-Estudiante de Economía – Universidad Nacional de Colombia
-Investigación en pobreza multidimensional, estadística aplicada y ML
+### Datos
+Los microdatos utilizados provienen de la **Encuesta de Calidad de Vida (ECV) 2024** del **DANE** (Departamento Administrativo Nacional de Estadística de Colombia).
 
-🔗 GitHub: https://github.com/jmeza-data
+- **Fuente oficial:** [DANE - Encuestas](https://www.dane.gov.co/)
+- **Licencia:** Uso libre para fines académicos y de investigación con atribución adecuada
 
-Si este repositorio te fue útil, ¡considera dejar una estrella ⭐!
+### Código
+El código contenido en este repositorio es de uso académico. Se permite su uso y modificación con la debida atribución al autor.
+
+### Citación sugerida
+```
+Meza García, J. S. (2024). Repositorio de Bases de Datos – ECV 2024 & IPM Colombia. 
+GitHub. https://github.com/jmeza-data/Repositorio_Bases_De_Datos
+```
+
+---
+
+## Autor
+
+**Jhoan Sebastián Meza García**  
+Estudiante de Economía  
+Universidad Nacional de Colombia
+
+📧 Contacto: [GitHub - jmeza-data](https://github.com/jmeza-data)
+
+---
+
+<p align="center">
+  <i>Desarrollado con 📊 y ☕ en Bogotá, Colombia</i>
+</p>
