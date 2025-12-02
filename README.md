@@ -47,23 +47,22 @@ Los datos procesados y las figuras resultantes pueden ser utilizados para análi
 ```
 Repositorio_Bases_De_Datos/
 │
-├── 01_Scripts/
+├── Scripts/
 │   ├── Limpieza_de_datos.R
 │   ├── Construcción_Base_ECV_Personas.R
 │   └── Contrucción_base_IPM_Nivel_hogar.R
 │
-├── 02_Datos_Procesados/
+├── Datos_Procesados/
 │   ├── hogares_ML.csv
 │   └── base_final.csv (IPM calculado)
 │
-├── 03_Figuras/
-│   ├── 1462e62a-7028-47b0-9900-378d7f8f930a.png
+├── Figuras/
+│   ├── Piramide_poblaciona_de_colombia.png
+│   ├── Indicadores.png
+│   ├── Educacion.png
 │   ├── Acceso_a_servicIOs_publicos.png
 │   ├── Condiciones_del_hogar.png
-│   ├── Condiciones_ed_hacinamiento_por_zona.png
-│   ├── Educacion.png
-│   ├── Indicadores.png
-│   └── Piramide_poblaciona_de_colombia.png
+│   └── Condiciones_ed_hacinamiento_por_zona.png
 │
 └── README.md
 ```
@@ -148,23 +147,23 @@ cd Repositorio_Bases_De_Datos
 ```
 
 ### Paso 2: Descargar datos de la ECV 2024
-Descarga los microdatos oficiales desde el [DANE](https://www.dane.gov.co/) y colócalos en una carpeta `00_Datos_Crudos/`.
+Descarga los microdatos oficiales desde el [DANE](https://www.dane.gov.co/) y colócalos en una carpeta `Datos_Crudos/`.
 
 ### Paso 3: Ejecutar scripts en orden
 ```r
 # 1. Limpieza
-source("01_Scripts/Limpieza_de_datos.R")
+source("Scripts/Limpieza_de_datos.R")
 
 # 2. Construcción de base de personas
-source("01_Scripts/Construcción_Base_ECV_Personas.R")
+source("Scripts/Construcción_Base_ECV_Personas.R")
 
 # 3. Cálculo del IPM
-source("01_Scripts/Contrucción_base_IPM_Nivel_hogar.R")
+source("Scripts/Contrucción_base_IPM_Nivel_hogar.R")
 ```
 
 ### Paso 4: Consultar resultados
-- **Bases procesadas:** `02_Datos_Procesados/`
-- **Figuras generadas:** `03_Figuras/`
+- **Bases procesadas:** `Datos_Procesados/`
+- **Figuras generadas:** `Figuras/`
 
 ---
 
@@ -173,37 +172,37 @@ source("01_Scripts/Contrucción_base_IPM_Nivel_hogar.R")
 A continuación se presentan las principales visualizaciones generadas en el proyecto:
 
 ### Pirámide Poblacional de Colombia
-![Pirámide poblacional](03_Figuras/Piramide_poblaciona_de_colombia.png)
+![Pirámide poblacional](Piramide_poblaciona_de_colombia.png)
 *Distribución de la población colombiana por sexo y grupos de edad según la ECV 2024*
 
 ---
 
 ### Dashboard de Indicadores Clave del IPM
-![Indicadores IPM](03_Figuras/Indicadores.png)
+![Indicadores IPM](Indicadores.png)
 *Panel de control con los principales indicadores del Índice de Pobreza Multidimensional*
 
 ---
 
 ### Análisis de Dimensiones Educativas
-![Educación](03_Figuras/Educacion.png)
+![Educación](Educacion.png)
 *Análisis de logro educativo, analfabetismo, inasistencia escolar y rezago escolar*
 
 ---
 
 ### Cobertura de Servicios Públicos
-![Servicios públicos](03_Figuras/Acceso_a_servicIOs_publicos.png)
+![Servicios públicos](Acceso_a_servicIOs_publicos.png)
 *Acceso a agua potable, energía eléctrica y saneamiento básico*
 
 ---
 
 ### Condiciones de la Vivienda
-![Condiciones hogar](03_Figuras/Condiciones_del_hogar.png)
+![Condiciones hogar](Condiciones_del_hogar.png)
 *Calidad de materiales de construcción y condiciones habitacionales*
 
 ---
 
 ### Hacinamiento por Zona Geográfica
-![Hacinamiento](03_Figuras/Condiciones_ed_hacinamiento_por_zona.png)
+![Hacinamiento](Condiciones_ed_hacinamiento_por_zona.png)
 *Comparación del hacinamiento crítico entre zonas urbanas y rurales*
 
 ---
